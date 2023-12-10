@@ -17,7 +17,14 @@ components.iframe("https://metar-taf.com/KDFW", width=1120, height=700)
 st.subheader("Flight Connections Lookup")
 components.iframe("https://www.flightconnections.com/",width=1120, height=700)
 st.subheader("Life ATC Radio (KDFW Arrivals)")
-components.iframe("https://www.liveatc.net/search/?icao=kdfw")
+components.html(
+    """
+    <html><head><meta name="viewport" content="width=device-width"></head><body cz-shortcut-listen="true"><video controls="" autoplay="" name="media"><source src="http://s1-bos.liveatc.net/kdfw1_atis_arr?nocache=2023121022420437625" type="audio/mpeg"></video></body></html>
+    
+    """
+
+
+)
 st.subheader("Live Marine Traffic Tracking")
 components.iframe("https://www.marinetraffic.com/en/ais/embed/zoom:8/centery:29/centerx:-95/maptype:4/shownames:false/mmsi:0/shipid:0/fleet:/fleet_id:/vtypes:/showmenu:/remember:false", width=1120, height=700)
 st.subheader("Live News Map - U.S.")

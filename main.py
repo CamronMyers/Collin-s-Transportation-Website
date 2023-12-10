@@ -1,6 +1,6 @@
 import streamlit as st
 import pandas as pd
-import plotly.express as px
+
 import streamlit.components.v1 as components
 
 st.set_page_config(layout="wide")
@@ -23,3 +23,5 @@ components.iframe("https://www.marinetraffic.com/en/ais/embed/zoom:8/centery:29/
 st.subheader("Live News Map - U.S.")
 components.iframe("https://usa.liveuamap.com/", width=1400,height=700)
 
+st.subheader("Live Taiwan Election Polls")
+components.iframe("https://flo.uri.sh/story/2010781/embed#slide-0", width=1400, height=900)
